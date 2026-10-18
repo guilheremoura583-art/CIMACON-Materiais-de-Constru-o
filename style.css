@@ -1,0 +1,758 @@
+
+/* ==========================
+   CIMACON - ESTILO DO SITE
+   ========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul: #102b46;
+    --azul-escuro: #091c30;
+    --laranja: #f28c28;
+    --branco: #ffffff;
+    --cinza: #647184;
+    --fundo: #f5f7fa;
+    --borda: #e4e9ef;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--azul);
+    background: var(--branco);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* MENU */
+
+.topo {
+    background: var(--branco);
+    border-bottom: 1px solid var(--borda);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.menu {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: var(--branco);
+    background: var(--laranja);
+    border-radius: 10px;
+    font-size: 29px;
+    font-weight: 900;
+}
+
+.destaque {
+    color: var(--laranja);
+}
+
+.logo small {
+    display: block;
+    margin-top: 5px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--laranja);
+}
+
+nav .nav-botao {
+    background: var(--azul);
+    color: var(--branco);
+    padding: 12px 18px;
+    border-radius: 6px;
+}
+
+nav .nav-botao:hover {
+    background: var(--laranja);
+    color: var(--branco);
+}
+
+/* APRESENTAÇÃO */
+
+.hero {
+    background:
+        radial-gradient(circle at 85% 15%, #234563 0, transparent 36%),
+        linear-gradient(120deg, var(--azul-escuro), var(--azul));
+    color: var(--branco);
+    padding: 90px 0;
+    overflow: hidden;
+}
+
+.hero-conteudo {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    align-items: center;
+    gap: 75px;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: var(--laranja);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    max-width: 670px;
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+}
+
+.hero h1 span {
+    color: var(--laranja);
+}
+
+.hero-texto > p {
+    max-width: 530px;
+    color: #d1dbe5;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.hero-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.botao {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 21px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 800;
+    border: 2px solid transparent;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.botao:hover {
+    transform: translateY(-3px);
+}
+
+.botao-laranja {
+    background: var(--laranja);
+    color: var(--branco);
+}
+
+.botao-laranja:hover {
+    background: #dc7413;
+}
+
+.botao-contorno {
+    border-color: #71869b;
+    color: var(--branco);
+}
+
+.botao-contorno:hover {
+    border-color: var(--laranja);
+    color: var(--laranja);
+}
+
+.hero-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 35px;
+    color: #d1dbe5;
+    font-size: 13px;
+}
+
+/* CARTÃO DO HERO */
+
+.hero-card {
+    position: relative;
+    padding: 40px 32px;
+    min-height: 360px;
+    border: 1px solid #526a80;
+    border-radius: 14px;
+    background: linear-gradient(145deg, #1a3b59, #10263c);
+    box-shadow: 0 25px 65px #00000030;
+}
+
+.card-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 76px;
+    margin-bottom: 27px;
+    background: #f28c2820;
+    border-radius: 15px;
+    font-size: 39px;
+}
+
+.card-legenda {
+    color: var(--laranja);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero-card h2 {
+    margin-top: 10px;
+    margin-bottom: 12px;
+    font-size: 31px;
+    line-height: 1.2;
+}
+
+.hero-card p {
+    color: #c2ceda;
+    font-size: 14px;
+}
+
+.linha-laranja {
+    width: 60px;
+    height: 4px;
+    background: var(--laranja);
+    margin: 23px 0;
+    border-radius: 10px;
+}
+
+.card-endereco {
+    color: #d1dbe5;
+    font-size: 13px;
+}
+
+/* BENEFÍCIOS */
+
+.beneficios {
+    padding: 40px 0;
+    background: var(--fundo);
+    border-bottom: 1px solid var(--borda);
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.beneficio {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.beneficio-icone {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    background: #fff0df;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.beneficio h3 {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.beneficio p {
+    color: var(--cinza);
+    font-size: 13px;
+}
+
+/* SOBRE */
+
+.sobre {
+    padding: 95px 0;
+}
+
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.sobre-marca {
+    min-height: 290px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: linear-gradient(145deg, #eaf0f6, #f7f9fb);
+    border: 1px solid var(--borda);
+}
+
+.sobre-marca > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background: var(--laranja);
+    color: var(--branco);
+    font-size: 68px;
+    font-weight: 900;
+}
+
+.sobre-marca p {
+    margin-top: 18px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.sobre-marca small {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.sobre-texto h2 {
+    max-width: 550px;
+    font-size: clamp(28px, 3.4vw, 42px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.sobre-texto > p {
+    color: var(--cinza);
+    margin-bottom: 22px;
+}
+
+.link-laranja {
+    color: #d66c0a;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.link-laranja:hover {
+    color: var(--azul);
+}
+
+/* CONTATO */
+
+.contato {
+    padding: 55px 0;
+    background: var(--azul);
+    color: var(--branco);
+}
+
+.contato-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.etiqueta-clara {
+    margin-bottom: 10px;
+}
+
+.contato h2 {
+    font-size: clamp(24px, 3vw, 36px);
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+.contato p {
+    color: #c5d2df;
+}
+
+.contato .botao {
+    flex-shrink: 0;
+}
+
+/* LOCALIZAÇÃO */
+
+.localizacao {
+    padding: 90px 0;
+    background: var(--fundo);
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo-secao .etiqueta {
+    margin-bottom: 8px;
+}
+
+.titulo-secao h2 {
+    font-size: clamp(30px, 4vw, 42px);
+    margin-bottom: 8px;
+}
+
+.titulo-secao p {
+    color: var(--cinza);
+}
+
+.localizacao-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 25px;
+    align-items: stretch;
+}
+
+.endereco-card {
+    padding: 32px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    box-shadow: 0 10px 35px #102b4608;
+}
+
+.endereco-card h3 {
+    font-size: 19px;
+    line-height: 1.4;
+    margin-bottom: 18px;
+}
+
+.endereco-card p {
+    color: var(--cinza);
+    font-size: 14px;
+}
+
+.endereco-card h4 {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.endereco-card > a:not(.botao) {
+    color: #d66c0a;
+    font-weight: 800;
+}
+
+.separador {
+    height: 1px;
+    background: var(--borda);
+    margin: 20px 0;
+}
+
+.botao-azul {
+    background: var(--azul);
+    color: var(--branco);
+}
+
+.botao-azul:hover {
+    background: #214c72;
+}
+
+.mapa-botao {
+    width: 100%;
+    margin-top: 24px;
+}
+
+.mapa {
+    min-height: 420px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--borda);
+    background: #e6ebf0;
+}
+
+.mapa iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    border: 0;
+}
+
+/* RODAPÉ */
+
+.rodape {
+    padding: 40px 0;
+    background: var(--azul-escuro);
+    color: var(--branco);
+}
+
+.rodape-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.logo-rodape {
+    margin-bottom: 10px;
+}
+
+.rodape-conteudo > p {
+    color: #c5d2df;
+    font-size: 13px;
+}
+
+.rodape-conteudo .copyright {
+    width: 100%;
+    border-top: 1px solid #ffffff20;
+    padding-top: 20px;
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+/* ANIMAÇÕES */
+
+@media (prefers-reduced-motion: no-preference) {
+    .hero-texto,
+    .hero-card {
+        animation: aparecer 0.8s ease both;
+    }
+
+    .hero-card {
+        animation-delay: 0.15s;
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+    .menu {
+        gap: 15px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 70px 0;
+    }
+
+    .hero-conteudo {
+        grid-template-columns: 1fr 0.8fr;
+        gap: 30px;
+    }
+
+    .hero-card {
+        padding: 28px 23px;
+    }
+
+    .beneficios-grid {
+        gap: 20px;
+    }
+
+    .sobre-conteudo {
+        gap: 35px;
+    }
+
+    .localizacao-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 650px) {
+    .container {
+        width: 90%;
+    }
+
+    .menu {
+        padding: 15px 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 17px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    nav .nav-botao {
+        padding: 9px 12px;
+    }
+
+    .hero {
+        padding: 55px 0;
+    }
+
+    .hero-conteudo {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        letter-spacing: -1.5px;
+    }
+
+    .hero-texto > p {
+        font-size: 15px;
+    }
+
+    .hero-botoes {
+        flex-direction: column;
+    }
+
+    .hero-botoes .botao {
+        width: 100%;
+    }
+
+    .hero-info {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .hero-card {
+        min-height: auto;
+    }
+
+    .beneficios-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .sobre {
+        padding: 65px 0;
+    }
+
+    .sobre-conteudo {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .sobre-marca {
+        min-height: 250px;
+    }
+
+    .contato {
+        padding: 45px 0;
+    }
+
+    .contato-conteudo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .contato .botao {
+        width: 100%;
+    }
+
+    .localizacao {
+        padding: 65px 0;
+    }
+
+    .localizacao-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .endereco-card {
+        padding: 24px;
+    }
+
+    .mapa,
+    .mapa iframe {
+        min-height: 320px;
+    }
+
+    .rodape {
+        padding: 35px 0;
+    }
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 380px) {
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    .hero-card h2 {
+        font-size: 27px;
+    }
+}
